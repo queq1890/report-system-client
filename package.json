@@ -1,0 +1,98 @@
+{
+  "name": "webpack-4-quickstart",
+  "version": "1.0.0",
+  "description": "> Webpack 4 tutorial: All You Need to Know, from 0 Conf to Production Mode",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "eslint": "eslint src",
+    "eslint:fix": "eslint --fix src",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentinogagliardi/webpack-4-quickstart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valentinogagliardi/webpack-4-quickstart/issues"
+  },
+  "homepage": "https://github.com/valentinogagliardi/webpack-4-quickstart#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.7",
+    "mini-css-extract-plugin": "^0.2.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "jest": "^23.6.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "regenerator-runtime": "^0.12.1",
+    "semantic-ui-css": "^2.4.0",
+    "semantic-ui-react": "^0.82.5",
+    "styled-components": "^4.0.0-beta.2",
+    "uuid": "^3.3.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/js/containers/**/*.{js,jsx}",
+      "src/js/components/**/*.{js,jsx}",
+      "!src/js/tests/**/*.spec.{js,jsx}",
+      "!src/js/containers/**/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 90,
+        "branches": 90,
+        "functions": 90,
+        "lines": 90
+      }
+    },
+    "moduleNameMapper": {
+      "^components/(.+)": "<rootDir>/src/js/components/$1",
+      "^containers/(.+)": "<rootDir>/src/js/containers/$1",
+      "^locales/(.+)": "<rootDir>/src/js/locales/$1"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "node",
+      "style.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/tests/jestSetup.js"
+  }
+}
