@@ -1,18 +1,57 @@
 # webpack-4-quickstart
-> Webpack 4 tutorial: All You Need to Know, from 0 Conf to Production Mode
 
-[![Donate](https://img.shields.io/badge/donate-patreon-orange.svg)](https://www.patreon.com/valentinogagliardi)
+> This is the client-side application of report-system
+
+## feature(WIP)
+
+### registration / session
+
+- creating an account with selecting type (member / team leader / group leader)
+- login / logout
+
+### member
+
+- can edit profile
+- can submit daily report to team leader
+- can use emoticon to express their feelings in the report
+- can tag issue to the report (any number of issues they want)
+
+### team leader
+
+- can see team member list
+- can see stats of daily reports( sorting by day / week / month)
+- can create weekly report to group leader
+
+### group leader
+
+- can see all teams' profile
+- can see all teams' report stats
+
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 
 ## Development
 
 ```bash
-npm i && npm run start
+$ git clone git@github.com:queq1890/report-system-client.git
+
+$ yarn
+
+$ yarn start
 ```
 
-## Meta
+## libraries
 
-Valentino Gagliardi - [valentinog.com](https://www.valentinog.com) - valentino@valentinog.com
+- React
+- Redux
+- Redux-saga
+- lodash
+- semantic-ui-react
+- styled-components
+- babel
+- webpack
+- eslint
+- jest
+- enzyme
 
 ## License
 
