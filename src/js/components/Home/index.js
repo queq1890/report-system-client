@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react';
+import SigninFormContainer from 'containers/Auth/SigninFormContainer';
 
 class Home extends PureComponent {
   render() {
     // isAuthenticated is temporary mocked
     // will use redux-saga & reducer to set proper value
-    const isAuthenticated = true;
+    const isAuthenticated = false;
     return !isAuthenticated ? (
       <div>
-        <p>not signed_in</p>
+        <SigninFormContainer />
       </div>
     ) : (
       <div>
