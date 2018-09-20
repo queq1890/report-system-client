@@ -50,7 +50,7 @@ module.exports = {
         ignorePureComponents: true,
       },
     ],
-    semi: 0,
+    semi: 2,
     'array-callback-return': 0,
   },
   settings: {
