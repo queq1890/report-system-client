@@ -6,4 +6,9 @@ const Img = styled.img`
   position: relative;
 `;
 
-export default Img;
+const Container = styled.div`
+  margin: 0 auto;
+  width: 400px;
+`;
+
+export { Img, Container };

@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import {
-  Form, Segment, Input, Button, Image, Grid, Container, Label,
+  Form, Segment, Input, Button, Image, Grid, Label,
 } from 'semantic-ui-react';
 import logo from 'images/framgia_logo.png';
+import { Container } from './styles';
 
 class SigninForm extends PureComponent {
   state = {
@@ -37,34 +38,33 @@ class SigninForm extends PureComponent {
         </Segment>
 
         <Container>
-          <Segment.Group>
-            <Form onSubmit={this.signinUser}>
+          <Form onSubmit={this.signinUser}>
 
-              <Segment>
-                <Form.Field>
-                  <label>email</label>
-                  <Input
-                    type="text"
-                    name="email"
-                    placeholder="your_email@mail.com"
-                    value={email}
-                    onChange={this.handleChange}
-                  />
+            <Segment>
+              <Label attached="top">Sign_in</Label>
+              <Form.Field>
+                <label>email</label>
+                <Input
+                  type="text"
+                  name="email"
+                  placeholder="your_email@mail.com"
+                  value={email}
+                  onChange={this.handleChange}
+                />
 
 
-                  <label>password</label>
-                  <Input
-                    type="password"
-                    name="password"
-                    placeholder="type your password"
-                    value={password}
-                    onChange={this.handleChange}
-                  />
-                </Form.Field>
-                <Button type="submit">Sign_in</Button>
-              </Segment>
-            </Form>
-          </Segment.Group>
+                <label>password</label>
+                <Input
+                  type="password"
+                  name="password"
+                  placeholder="type your password"
+                  value={password}
+                  onChange={this.handleChange}
+                />
+              </Form.Field>
+              <Button type="submit">Sign_in</Button>
+            </Segment>
+          </Form>
         </Container>
       </div>
     );
