@@ -9,9 +9,25 @@ function* postSigninUser(payload) {
   try {
     const params = payload.payload;
     const response = yield call(signinUserAPI, params);
+
+    // define auth related constants from response headers
     const { 'access-token': accessToken, client, uid } = response.headers;
-    // TODO : set tokens etc to localStorage
-    yield put(signinUserSuccess(response));
+    const authData = {
+      accessToken,
+      client,
+      uid,
+    };
+
+    // define user information from reponse data
+    const { data: userData } = response.data;
+    const currentUser = {
+      authData,
+      userData,
+    };
+
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+    yield put(signinUserSuccess(userData));
   } catch (e) {
     yield put(signinUserFailed(e));
   }

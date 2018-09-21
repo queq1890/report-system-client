@@ -20,7 +20,7 @@ const authReducer = (state = initialState, action) => {
     case SIGNIN_USER_FAILED:
       return {
         ...state,
-        user: action.payload,
+        err: action.payload,
       };
     default:
       return state;
