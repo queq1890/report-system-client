@@ -5,7 +5,8 @@ class Home extends PureComponent {
   render() {
     // isAuthenticated is temporary mocked
     // will use redux-saga & reducer to set proper value
-    const isAuthenticated = false;
+    const { isAuthenticated, user } = this.props;
+    console.log(user);
     return !isAuthenticated ? (
       <div>
         <SigninFormContainer />
