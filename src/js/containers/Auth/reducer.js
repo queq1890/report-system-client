@@ -4,9 +4,12 @@ import {
   SIGNIN_USER_FAILED,
 } from './SigninFormContainer/constants';
 
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
 const initialState = {
-  user: {},
+  user: currentUser ? currentUser.userData : {},
   err: {},
+  isAuthenticated: !!currentUser,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -16,6 +19,7 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload,
+        isAuthenticated: true,
       };
     case SIGNIN_USER_FAILED:
       return {
