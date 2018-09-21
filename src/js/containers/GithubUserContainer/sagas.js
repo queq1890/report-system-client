@@ -7,7 +7,8 @@ import { fetchUserSuccess, fetchUserFail } from './actions';
 
 function* getGithubUser() {
   try {
-    const profile = yield call(getUserAPI);
+    const response = yield call(getUserAPI);
+    const profile = response.data;
     yield put(fetchUserSuccess(profile));
   } catch (e) {
     yield put(fetchUserFail(e));
