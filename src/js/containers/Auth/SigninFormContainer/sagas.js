@@ -8,9 +8,9 @@ import { signinUserSuccess, signinUserFailed } from './actions';
 function* postSigninUser(payload) {
   try {
     const params = payload.payload;
-    console.log(params);
     const response = yield call(signinUserAPI, params);
-    console.log(response);
+    const { 'access-token': accessToken, client, uid } = response.headers;
+    // TODO : set tokens etc to localStorage
     yield put(signinUserSuccess(response));
   } catch (e) {
     yield put(signinUserFailed(e));
