@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import {
-  Form, Segment, Input, Button, Image, Grid, Label,
+  Form, Segment, Input, Button, Image, Label,
 } from 'semantic-ui-react';
 import logo from 'images/framgia_logo.png';
+import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 class SigninForm extends PureComponent {
@@ -52,7 +53,6 @@ class SigninForm extends PureComponent {
                   onChange={this.handleChange}
                 />
 
-
                 <label>password</label>
                 <Input
                   type="password"
@@ -61,6 +61,7 @@ class SigninForm extends PureComponent {
                   value={password}
                   onChange={this.handleChange}
                 />
+
               </Form.Field>
               <Button type="submit">Sign_in</Button>
             </Segment>
@@ -70,5 +71,9 @@ class SigninForm extends PureComponent {
     );
   }
 }
+
+SigninForm.propTypes = {
+  signinUser: PropTypes.func,
+};
 
 export default SigninForm;

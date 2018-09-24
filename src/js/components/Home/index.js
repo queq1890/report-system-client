@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import SigninFormContainer from 'containers/Auth/SigninFormContainer';
 
 class Home extends PureComponent {
@@ -18,5 +19,10 @@ class Home extends PureComponent {
     );
   }
 }
+
+Home.propTypes = {
+  isAuthenticated: PropTypes.bool,
+  user: PropTypes.arrayOf(Object),
+};
 
 export default Home;
