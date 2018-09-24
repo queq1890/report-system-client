@@ -6,6 +6,7 @@ import { signinUser } from './actions';
 const mapStateToProps = state => ({
   user: state.authReducer.user,
   err: state.authReducer.err,
+  isAuthenticated: state.authReducer.isAuthenticated,
 });
 
 const mapDispatchToProps = dispatch => ({

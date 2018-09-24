@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Redirect } from 'react-router-dom';
 import {
   Form, Segment, Input, Button, Image, Label,
 } from 'semantic-ui-react';
@@ -31,6 +32,14 @@ class SigninForm extends PureComponent {
 
   render() {
     const { email, password } = this.state;
+    const { isAuthenticated } = this.props;
+
+    if (isAuthenticated) {
+      return (
+        <Redirect to="/mypage" />
+      );
+    }
+
     return (
       <div>
         <Segment>
